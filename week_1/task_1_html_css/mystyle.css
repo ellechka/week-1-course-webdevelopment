@@ -1,0 +1,28 @@
+h1 {
+    font-family: "Shadows Into Light", cursive;
+}
+a {
+    text-decoration: none;
+    color: #6D545D;
+    padding: 5px;
+}
+a:hover {
+    box-shadow: inset 500px 0 0 0 #B2AA95;
+}
+img {
+    max-width: 100%;
+    border: 1rem solid #B2AA95;
+    border-radius: 10px;
+}
+li, tr {
+    font-family: "Shadows Into Light", cursive;
+}
+.text, a {
+    font-family: "Asimovian", sans-serif;
+}
+tbody tr:nth-child(even) {
+    background-color: #B2AA95;
+}
+ul {
+    list-style-type: none;
+}
