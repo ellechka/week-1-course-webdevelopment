@@ -1,11 +1,34 @@
-const coordinates1 = prompt("Enter coordinates of the first point using space between them, e.g. x1 y1:");
-const coordinates2 = prompt("Enter coordinates of the second point using space between them, e.g. x2 y2:");
+const sides = prompt("Enter the lengths of three sides using space, e.g. 3 6 5: ");
+const output = document.querySelector("p");
 
-const [x1,y1] = coordinates1.trim().split(/\s+/).map(Number);
-const [x2,y2] = coordinates2.trim().split(/\s+/).map(Number);
+if (sides === null) {
+  output.innerHTML = "Input cancelled";
+} else {
+  const parts = sides.trim().split(/\s+/);
+  const [a, b, c] = parts.map(Number);
 
-const distance = Math.sqrt(((x2 - x1) ** 2) + ((y2 - y1) ** 2));
+  const isThreeValues = parts.length === 3;
+  const isValidNumbers = Number.isFinite(a) && Number.isFinite(b) && Number.isFinite(c);
 
-document.getElementById("result").innerHTML = "Total distance: " + distance.toFixed(2);
+  if (!isThreeValues || !isValidNumbers) {
+    output.innerHTML = "Please enter exactly three numbers";
+  } else if (a <= 0 || b <= 0 || c <= 0) {
+    output.innerHTML = "Sides must be positive";
+  } else if (!(a + b > c && a + c > b && b + c > a)){
+    output.innerHTML = "These sides can't form a triangle";
+  } else {
+    let nameSide;
+
+    if (a === b && b === c) {
+      nameSide = "equilateral";
+    } else if (a === b || b === c || a === c) {
+      nameSide = "isosceles";
+    } else {
+      nameSide = "scalene";
+    }
+
+    output.innerHTML = "Triangle is " + nameSide;
+  }
+}
 
 
