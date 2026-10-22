@@ -1,9 +1,11 @@
-let temperatureInCelsius = Number(prompt("Please enter the temperature in Celsius: "));
+const coordinates1 = prompt("Enter coordinates of the first point using space between them, e.g. x1 y1:");
+const coordinates2 = prompt("Enter coordinates of the second point using space between them, e.g. x2 y2:");
 
-let temperatureInFahrenheit = (temperatureInCelsius * (9/5)) + 32;
-let temperatureInKelvin = temperatureInCelsius + 273.15;
+const [x1,y1] = coordinates1.trim().split(/\s+/).map(Number);
+const [x2,y2] = coordinates2.trim().split(/\s+/).map(Number);
 
-document.getElementById("C").innerHTML = "Temperature in Celsius: " + temperatureInCelsius;
-document.getElementById("F").innerHTML = "Converted temperature in Fahrenheit: " + temperatureInFahrenheit;
-document.getElementById("K").innerHTML = "Temperature in Kelvin: " + temperatureInKelvin;
+const distance = Math.sqrt(((x2 - x1) ** 2) + ((y2 - y1) ** 2));
+
+document.getElementById("result").innerHTML = "Total distance: " + distance.toFixed(2);
+
 
