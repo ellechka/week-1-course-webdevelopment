@@ -1,0 +1,29 @@
+{
+  "name": "week-1-course-webdevelopment",
+  "version": "1.0.0",
+  "description": "There is HTML/CSS and JS tasks for the course web development (websovelluskehitys). Week 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ellechka/week-1-course-webdevelopment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ellechka/week-1-course-webdevelopment/issues"
+  },
+  "homepage": "https://github.com/ellechka/week-1-course-webdevelopment#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0"
+  },
+  "dependencies": {
+    "lodash": "^4.18.1"
+  }
+}
